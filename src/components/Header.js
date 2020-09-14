@@ -10,7 +10,6 @@ export default function Header() {
   const [active, setActive] = useState(true);
 
   useEffect(() => {
-    console.log(active);
     const buttonToggle = document.getElementById("header-nav-toggle");
     const nav = document.getElementById("header-nav");
     if (active) {
