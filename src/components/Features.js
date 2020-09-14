@@ -9,7 +9,7 @@ export default function Features(props) {
       data-aos-delay={props.aosDelay}
     >
       <div className="tiles-item-inner">
-        <div className="features-tiles-item-header">
+        <div className="features-tiles-item-header" style={{ margin: "auto" }}>
           <div className="features-tiles-item-image mb-16">
             <img
               src={props.data.img}
@@ -19,7 +19,10 @@ export default function Features(props) {
             />
           </div>
         </div>
-        <div className="features-tiles-item-content">
+        <div
+          className="features-tiles-item-content"
+          style={{ textAlign: "center" }}
+        >
           <h4 className="mt-0 mb-8">{props.data.title}</h4>
           <p className="m-0 text-sm">{props.data.description}</p>
         </div>

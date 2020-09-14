@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import Logo from "assets/images/logo.svg";
@@ -7,6 +7,27 @@ import Button from "elements/Button";
 const menuName = ["Home", "Features", "Pricing", "Showcase"];
 
 export default function Header() {
+  const [active, setActive] = useState(true);
+
+  useEffect(() => {
+    console.log(active);
+    const buttonToggle = document.getElementById("header-nav-toggle");
+    const nav = document.getElementById("header-nav");
+    if (active) {
+      buttonToggle.addEventListener("click", () => {
+        nav.classList.add("is-active");
+        nav.style.maxHeight = "292px";
+        document.body.classList.add("off-nav-is-active");
+      });
+    } else {
+      buttonToggle.addEventListener("click", () => {
+        nav.classList.remove("is-active");
+        nav.style.maxHeight = "auto";
+        document.body.classList.remove("off-nav-is-active");
+      });
+    }
+  }, [active]);
+
   return (
     <header className="site-header reveal-from-bottom" data-aos="fade-down">
       <div className="container">
@@ -23,6 +44,7 @@ export default function Header() {
             className="header-nav-toggle"
             aria-controls="primary-menu"
             aria-expanded="false"
+            onClick={() => (active ? setActive(false) : setActive(true))}
           >
             <span className="screen-reader">Menu</span>
             <span className="hamburger">
