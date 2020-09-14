@@ -7,10 +7,15 @@ export default function Section(props) {
 
   if (props.isCenteredContent) className.push("center-content");
 
-  return <section className={className.join(" ")}>{props.children}</section>;
+  return (
+    <section className={className.join(" ")} data-aos={props.aos}>
+      {props.children}
+    </section>
+  );
 }
 
 Section.propTypes = {
+  aos: propTypes.string,
   isCenteredContent: propTypes.bool,
   className: propTypes.string,
 };

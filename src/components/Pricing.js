@@ -6,7 +6,7 @@ import Button from "elements/Button";
 
 export default function Pricing(props) {
   return (
-    <Card hasShadow>
+    <Card hasShadow aos="fade-up" aosDelay={props.delay * 250}>
       <div className="pricing-item-content">
         <div className="pricing-item-header pb-24 mb-24">
           <div className="pricing-item-price mb-4">

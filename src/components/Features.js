@@ -3,7 +3,11 @@ import propTypes from "prop-types";
 
 export default function Features(props) {
   return (
-    <div className="tiles-item">
+    <div
+      className="tiles-item"
+      data-aos={props.aos}
+      data-aos-delay={props.aosDelay}
+    >
       <div className="tiles-item-inner">
         <div className="features-tiles-item-header">
           <div className="features-tiles-item-image mb-16">
@@ -25,5 +29,7 @@ export default function Features(props) {
 }
 
 Features.propTypes = {
+  aos: propTypes.string,
+  aosDelay: propTypes.number,
   data: propTypes.object,
 };

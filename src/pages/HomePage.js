@@ -126,7 +126,11 @@ export default function HomePage() {
     <div className="body-wrap">
       <Header />
       <main className="site-content">
-        <Section className="hero illustration-section-01" isCenteredContent>
+        <Section
+          className="hero illustration-section-01"
+          isCenteredContent
+          aos="fade-up"
+        >
           <div className="container-sm">
             <div className="hero-inner section-inner">
               <div className="hero-content">
@@ -168,13 +172,18 @@ export default function HomePage() {
             <div className="features-tiles-inner section-inner">
               <div className="tiles-wrap">
                 {features.map((feature, index) => (
-                  <Features key={index} data={feature} />
+                  <Features
+                    key={index}
+                    data={feature}
+                    aos="fade-up"
+                    aosDelay={index * 250}
+                  />
                 ))}
               </div>
             </div>
           </div>
         </Section>
-        <Section className="pricing">
+        <Section className="pricing" aos="fade-up">
           <div className="container">
             <div className="pricing-inner section-inner has-top-divider">
               <div className="section-header center-content">
@@ -188,7 +197,7 @@ export default function HomePage() {
               </div>
               <div className="tiles-wrap">
                 {pricing.map((price, index) => (
-                  <Pricing key={index} data={price} />
+                  <Pricing key={index} data={price} delay={index} />
                 ))}
               </div>
             </div>

@@ -32,7 +32,7 @@ export default function Footer() {
   const services = ["Contact", "About us", "FAQ's", "Support"];
 
   return (
-    <footer className="site-footer center-content-mobile">
+    <footer className="site-footer center-content-mobile" data-aos="fade-up">
       <div className="container">
         <div className="site-footer-inner">
           <div className="footer-top space-between text-xxs">

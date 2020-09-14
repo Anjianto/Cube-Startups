@@ -8,7 +8,7 @@ const menuName = ["Home", "Features", "Pricing", "Showcase"];
 
 export default function Header() {
   return (
-    <header className="site-header reveal-from-bottom">
+    <header className="site-header reveal-from-bottom" data-aos="fade-down">
       <div className="container">
         <div className="site-header-inner">
           <div className="brand">

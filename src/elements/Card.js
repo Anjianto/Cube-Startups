@@ -6,7 +6,11 @@ export default function Card(props) {
   className.push(props.className);
 
   return (
-    <div className={className.join(" ")}>
+    <div
+      className={className.join(" ")}
+      data-aos={props.aos}
+      data-aos-delay={props.aosDelay}
+    >
       <div
         className={`tiles-item-inner ${props.hasShadow ? "has-shadow" : ""}`}
       >
@@ -17,6 +21,8 @@ export default function Card(props) {
 }
 
 Card.propTypes = {
+  aos: propTypes.string,
+  aosDelay: propTypes.number,
   classNmae: propTypes.string,
   hasShadow: propTypes.bool,
 };

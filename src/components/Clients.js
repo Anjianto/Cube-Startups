@@ -12,7 +12,7 @@ export default function Clients() {
   const clients = [Client01, Client02, Client03, Client04, Client05];
 
   return (
-    <Section className="clients">
+    <Section className="clients" aos="zoom-in">
       <div className="container">
         <div className="clients-inner section-inner has-top-divider has-bottom-divider">
           <ul className="list-reset">
